@@ -89,7 +89,7 @@ DRTEleccionesCat = (function() {
     	$.ajax({
 		    url: url,
 		    dataType: "json",
-		    timeout: 5000
+		    timeout: 20000
 		}).done(function(data) {
 			if (!data.transversales || !data.resultados || data.transversales['escrutado'] <= 0) {
 				$container.find(".chart-group").addClass("chart-group-error");
@@ -216,7 +216,7 @@ DRTEleccionesCat = (function() {
     			j++;
     		}
     		chartColors.push(color);
-    		if (i < 8) {
+    		if (i < 7) {
     			$chartLegend.append('<span class="party"><span class="party-color" style="background:' + color + '"></span>' + party.shortname + '</span>');
     		}
     	}
